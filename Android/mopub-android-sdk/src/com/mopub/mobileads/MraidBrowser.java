@@ -74,6 +74,7 @@ public class MraidBrowser extends Activity {
                         url.startsWith("voicemail:") || url.startsWith("sms:") || 
                         url.startsWith("mailto:") || url.startsWith("geo:") || 
                         url.startsWith("google.streetview:") ||
+                        url.endsWith(".mp4") ||
                         "play.google.com".equals(host) ||
                         "market.android.com".equals(host)) {
                     try {
@@ -83,7 +84,6 @@ public class MraidBrowser extends Activity {
                                 "Ensure that your phone can handle this intent.");
                     }
                     
-                    finish();
                     return true;
                 }
                 
